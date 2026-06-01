@@ -1,0 +1,150 @@
+:root {
+  --navbar-height: 64px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--navbar-height);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  z-index: 50;
+}
+
+.navbar__inner {
+  height: 100%;
+  max-width: 1126px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.navbar__brand {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  padding: 8px 6px;
+  border-radius: 8px;
+  transition: color 200ms ease;
+}
+
+.navbar__link:hover {
+  color: var(--accent-hover);
+}
+
+.navbar__link--active {
+  color: var(--accent);
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar__button {
+  border: 1px solid currentColor;
+  background: transparent;
+  color: var(--text-primary);
+  border-radius: 10px;
+  padding: 8px 10px;
+  font: inherit;
+  cursor: pointer;
+  transition: color 200ms ease, background-color 200ms ease;
+}
+
+.navbar__button:hover {
+  color: var(--accent);
+  background: var(--bg-primary);
+}
+
+.navbar__hamburger {
+  display: none;
+  border: 1px solid currentColor;
+  background: transparent;
+  color: var(--text-primary);
+  border-radius: 10px;
+  width: 44px;
+  height: 40px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.navbar__hamburgerBar {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+}
+
+.navbar__hamburgerBar + .navbar__hamburgerBar {
+  margin-top: 6px;
+}
+
+.app-main {
+  padding-top: var(--navbar-height);
+}
+
+@media (max-width: 768px) {
+  .navbar__hamburger {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .navbar__right {
+    display: none;
+  }
+
+  .navbar__right.is-open {
+    display: flex;
+    position: absolute;
+    top: var(--navbar-height);
+    left: 0;
+    right: 0;
+    background: var(--bg-secondary);
+    padding: 12px 16px 16px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .navbar__links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .navbar__link {
+    padding: 10px 12px;
+  }
+
+  .navbar__actions {
+    justify-content: flex-end;
+  }
+}

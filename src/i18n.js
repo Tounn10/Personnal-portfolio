@@ -5,12 +5,12 @@ const resources = {
   en: {
     translation: {
       nav: {
-        home: 'Home (EN)',
-        about: 'About (EN)',
-        skills: 'Skills (EN)',
-        projects: 'Projects (EN)',
-        experience: 'Experience (EN)',
-        contact: 'Contact (EN)',
+        home: 'Home',
+        about: 'About',
+        skills: 'Skills',
+        projects: 'Projects',
+        experience: 'Experience',
+        contact: 'Contact',
       },
       hero: {
         greeting: 'Hi (EN)',
@@ -23,12 +23,12 @@ const resources = {
   fr: {
     translation: {
       nav: {
-        home: 'Accueil (FR)',
-        about: 'À propos (FR)',
-        skills: 'Compétences (FR)',
-        projects: 'Projets (FR)',
-        experience: 'Expérience (FR)',
-        contact: 'Contact (FR)',
+        home: 'Accueil',
+        about: 'À propos',
+        skills: 'Compétences',
+        projects: 'Projets',
+        experience: 'Expérience',
+        contact: 'Contact',
       },
       hero: {
         greeting: 'Salut (FR)',
