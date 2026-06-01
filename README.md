@@ -32,6 +32,20 @@ This site showcases my projects across three profiles:
 
 ---
 
+## Development
+
+### Install
+
+`npm install`
+
+### Run locally
+
+`npm run dev`
+
+### Build
+
+`npm run build`
+
 ## Work Authorization
 
 🌎 Available for **full-time roles in the United States** from August 2026 under OPT (valid through August 2027). H-1B sponsorship required thereafter.
