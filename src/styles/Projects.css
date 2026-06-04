@@ -1,0 +1,112 @@
+.projects {
+  width: 100%;
+  padding: 40px 16px;
+}
+
+.projects__inner {
+  width: 100%;
+  max-width: 1126px;
+  margin: 0 auto;
+}
+
+.projects__title {
+  margin: 0 0 18px;
+  font-size: 28px;
+  line-height: 1.15;
+  color: var(--text-primary);
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.project-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--text-secondary);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.project-card__title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+
+.project-card__github {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 1px solid var(--text-secondary);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: border-color 150ms ease, color 150ms ease,
+    background-color 150ms ease;
+}
+
+.project-card__github:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.project-card__github:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.project-card__githubIcon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.project-card__description {
+  margin: 0;
+  color: var(--text-secondary);
+  font-weight: 500;
+  max-width: 75ch;
+}
+
+.project-card__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  user-select: none;
+}
+
+@media (max-width: 900px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+}

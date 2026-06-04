@@ -7,5 +7,29 @@
       "cybersecurity": "Cybersecurity",
       "tools": "Tools"
     }
+  },
+  "projects": {
+    "title": "Projects",
+    "githubLink": "View on GitHub",
+    "items": {
+      "area": {
+        "description": "Full-stack IFTTT-style automation platform with Dockerized services and OAuth2-based integrations."
+      },
+      "dynamicGameEngine": {
+        "description": "Custom 2D game engine in C++ using SFML for rendering, input, and game loops."
+      },
+      "antman": {
+        "description": "File compression CLI implementing multiple algorithms with a focus on performance and correctness."
+      },
+      "corewar": {
+        "description": "Virtual machine and assembly interpreter for the classic Corewar programming challenge."
+      },
+      "hydra": {
+        "description": "Boot2Root CTF challenge walkthrough-style project focused on Linux enumeration and exploitation."
+      },
+      "weatherPredictor": {
+        "description": "Go-based CLI tool that fetches and displays short-term weather forecasts from an API."
+      }
+    }
   }
 }
