@@ -8,6 +8,7 @@
   --accent-hover: #1e2450;
   --text-primary: #1a1a2e;
   --text-secondary: #4a4a6a;
+  --section-padding: 5rem 2rem;
 }
 
 [data-theme="dark"] {
@@ -37,4 +38,10 @@ body {
   background: var(--bg-primary);
   color: var(--text-primary);
   transition: background-color 200ms ease, color 200ms ease;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 3rem 1rem;
+  }
 }

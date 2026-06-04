@@ -1,6 +1,6 @@
 .contact {
   width: 100%;
-  padding: 40px 16px;
+  padding: var(--section-padding);
 }
 
 .contact__inner {
@@ -186,6 +186,13 @@
 @media (max-width: 900px) {
   .contact__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form,
+  .contact-links {
+    padding: 14px;
   }
 }
 

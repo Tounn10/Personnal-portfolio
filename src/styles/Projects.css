@@ -1,6 +1,6 @@
 .projects {
   width: 100%;
-  padding: 40px 16px;
+  padding: var(--section-padding);
 }
 
 .projects__inner {
@@ -108,5 +108,15 @@
 @media (max-width: 900px) {
   .projects__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    padding: 14px;
+  }
+
+  .project-card__top {
+    align-items: center;
   }
 }

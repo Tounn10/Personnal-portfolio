@@ -1,6 +1,6 @@
 .skills {
   width: 100%;
-  padding: 40px 16px;
+  padding: var(--section-padding);
 }
 
 .skills__inner {
@@ -66,5 +66,11 @@
 @media (max-width: 900px) {
   .skills__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-category {
+    padding: 14px;
   }
 }

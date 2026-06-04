@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
-import { useTheme } from '../context/ThemeContext.jsx'
+import useTheme from '../context/useTheme.js'
 import './Navbar.css'
 
 export default function Navbar() {

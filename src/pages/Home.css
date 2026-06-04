@@ -3,7 +3,7 @@
   min-height: calc(100svh - var(--navbar-height, 64px));
   display: flex;
   align-items: center;
-  padding: 40px 16px;
+  padding: var(--section-padding);
   overflow: hidden;
 }
 
@@ -179,5 +179,29 @@
 
   .home-hero__shapeWrap {
     order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    min-height: auto;
+  }
+
+  .home-hero__inner {
+    gap: 24px;
+  }
+
+  .home-hero__shape {
+    width: min(260px, 72vw);
+  }
+}
+
+@media (max-width: 520px) {
+  .home-hero__cta {
+    flex-direction: column;
+  }
+
+  .home-hero__btn {
+    width: 100%;
   }
 }

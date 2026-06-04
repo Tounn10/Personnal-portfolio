@@ -1,6 +1,6 @@
 .about {
   width: 100%;
-  padding: 40px 16px;
+  padding: var(--section-padding);
 }
 
 .about-section {
@@ -178,5 +178,20 @@
 
   .about-stats {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section + .about-section {
+    margin-top: 36px;
+  }
+
+  .about-timeline__headingRow {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .about-timeline__sep {
+    margin: 0 6px;
   }
 }
