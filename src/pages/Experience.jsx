@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 
+import FlagIcon from '../components/FlagIcon'
 import '../styles/Experience.css'
 
 function asArray(value) {
@@ -14,6 +15,7 @@ export default function Experience() {
     () => [
       {
         key: 'bernerBecker',
+        flagCode: 'DE',
         companyKey: 'experience.items.bernerBecker.company',
         roleKey: 'experience.items.bernerBecker.role',
         locationKey: 'experience.items.bernerBecker.location',
@@ -22,6 +24,7 @@ export default function Experience() {
       },
       {
         key: 'vosslohCogifer',
+        flagCode: 'FR',
         companyKey: 'experience.items.vosslohCogifer.company',
         roleKey: 'experience.items.vosslohCogifer.role',
         locationKey: 'experience.items.vosslohCogifer.location',
@@ -30,6 +33,7 @@ export default function Experience() {
       },
       {
         key: 'freelance',
+        flagCode: null,
         companyKey: 'experience.items.freelance.company',
         roleKey: 'experience.items.freelance.role',
         locationKey: 'experience.items.freelance.location',
@@ -56,6 +60,12 @@ export default function Experience() {
                 <div className="experience-timeline__card">
                   <div className="experience-timeline__top">
                     <h2 className="experience-timeline__heading">
+                      {item.flagCode ? (
+                        <FlagIcon
+                          code={item.flagCode}
+                          className="experience-timeline__flag"
+                        />
+                      ) : null}
                       <span className="experience-timeline__company">
                         {t(item.companyKey)}
                       </span>

@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 
+import { links } from '../config/links'
 import '../styles/Projects.css'
 
 function GitHubIcon(props) {
@@ -14,8 +15,6 @@ function GitHubIcon(props) {
 export default function Projects() {
   const { t } = useTranslation()
 
-  const githubProfile = 'https://github.com/Tounn10'
-
   const projects = useMemo(
     () => [
       {
@@ -23,42 +22,42 @@ export default function Projects() {
         title: 'AREA',
         descriptionKey: 'projects.items.area.description',
         stack: ['Docker', 'OAuth2', 'React', 'Node.js'],
-        githubUrl: githubProfile,
+        githubUrl: links.github,
       },
       {
         key: 'dynamicGameEngine',
         title: 'Dynamic Game Engine',
         descriptionKey: 'projects.items.dynamicGameEngine.description',
         stack: ['C++', 'SFML'],
-        githubUrl: githubProfile,
+        githubUrl: links.github,
       },
       {
         key: 'antman',
         title: 'Antman',
         descriptionKey: 'projects.items.antman.description',
         stack: ['C'],
-        githubUrl: githubProfile,
+        githubUrl: links.github,
       },
       {
         key: 'corewar',
         title: 'Corewar',
         descriptionKey: 'projects.items.corewar.description',
         stack: ['C'],
-        githubUrl: githubProfile,
+        githubUrl: links.github,
       },
       {
         key: 'hydra',
         title: 'Hydra',
         descriptionKey: 'projects.items.hydra.description',
         stack: ['Linux', 'Metasploit', 'Bash'],
-        githubUrl: githubProfile,
+        githubUrl: links.github,
       },
       {
         key: 'weatherPredictor',
         title: 'Weather Predictor',
         descriptionKey: 'projects.items.weatherPredictor.description',
         stack: ['Go'],
-        githubUrl: githubProfile,
+        githubUrl: links.github,
       },
     ],
     [],

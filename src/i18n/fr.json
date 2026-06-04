@@ -6,8 +6,14 @@
       "email": "Email",
       "message": "Message",
       "send": "Envoyer",
-      "success": "Message envoyé !",
-      "error": "Une erreur s'est produite. Veuillez réessayer."
+      "success": "Message envoyé avec succès !",
+      "error": "Échec de l'envoi du message. Veuillez réessayer.",
+      "missingConfig": "Le formulaire de contact n'est pas encore configuré. Ajoutez VITE_FORMSPREE_FORM_ID pour activer les envois.",
+      "validation": {
+        "name": "Veuillez entrer votre nom.",
+        "email": "Veuillez entrer une adresse email valide.",
+        "message": "Veuillez entrer un message."
+      }
     },
     "links": {
       "title": "Me retrouver ici"

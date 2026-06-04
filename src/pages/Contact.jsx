@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
+import { links } from '../config/links'
 import '../styles/Contact.css'
 
-const FORMSPREE_FORM_ID = 'YOUR_FORM_ID' // TODO: Replace YOUR_FORM_ID with your Formspree form id.
+const FORMSPREE_FORM_ID = import.meta.env.VITE_FORMSPREE_FORM_ID || ''
+const EMAIL_PATTERN = /^\S+@\S+\.\S+$/
 
 function MailIcon(props) {
   return (
@@ -35,29 +37,31 @@ export default function Contact() {
     name: '',
     email: '',
     message: '',
+    _gotcha: '',
   })
   const [status, setStatus] = useState('idle')
+  const [errorMessage, setErrorMessage] = useState('')
 
   const contactLinks = [
     {
       key: 'email',
       label: 'Email',
-      value: 'etienne.namur@epitech.eu',
-      href: 'mailto:etienne.namur@epitech.eu',
+      value: links.emailAddress,
+      href: links.email,
       Icon: MailIcon,
     },
     {
       key: 'linkedin',
       label: 'LinkedIn',
       value: 'linkedin.com/in/etienne-namur',
-      href: 'https://linkedin.com/in/etienne-namur',
+      href: links.linkedin,
       Icon: LinkedInIcon,
     },
     {
       key: 'github',
       label: 'GitHub',
       value: 'github.com/Tounn10',
-      href: 'https://github.com/Tounn10',
+      href: links.github,
       Icon: GitHubIcon,
     },
   ]
@@ -65,11 +69,38 @@ export default function Contact() {
   const onChange = (event) => {
     const { name, value } = event.target
     setFormData((current) => ({ ...current, [name]: value }))
+    if (status !== 'submitting') {
+      setStatus('idle')
+      setErrorMessage('')
+    }
+  }
+
+  const validateForm = () => {
+    if (!formData.name.trim()) return t('contact.form.validation.name')
+    if (!EMAIL_PATTERN.test(formData.email.trim())) return t('contact.form.validation.email')
+    if (!formData.message.trim()) return t('contact.form.validation.message')
+
+    return ''
   }
 
   const onSubmit = async (event) => {
     event.preventDefault()
+
+    const validationError = validateForm()
+    if (validationError) {
+      setErrorMessage(validationError)
+      setStatus('error')
+      return
+    }
+
+    if (!FORMSPREE_FORM_ID) {
+      setErrorMessage(t('contact.form.missingConfig'))
+      setStatus('error')
+      return
+    }
+
     setStatus('submitting')
+    setErrorMessage('')
 
     try {
       const response = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
@@ -78,16 +109,22 @@ export default function Contact() {
           Accept: 'application/json',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          message: formData.message.trim(),
+          _gotcha: formData._gotcha,
+        }),
       })
 
       if (!response.ok) {
         throw new Error('Formspree request failed')
       }
 
-      setFormData({ name: '', email: '', message: '' })
+      setFormData({ name: '', email: '', message: '', _gotcha: '' })
       setStatus('success')
     } catch {
+      setErrorMessage(t('contact.form.error'))
       setStatus('error')
     }
   }
@@ -145,6 +182,16 @@ export default function Contact() {
               />
             </div>
 
+            <input
+              className="contact-form__honeypot"
+              type="text"
+              name="_gotcha"
+              tabIndex="-1"
+              autoComplete="off"
+              value={formData._gotcha}
+              onChange={onChange}
+            />
+
             <button
               className="contact-form__button"
               type="submit"
@@ -161,7 +208,7 @@ export default function Contact() {
 
             {status === 'error' ? (
               <p className="contact-form__message contact-form__message--error" role="alert">
-                {t('contact.form.error')}
+                {errorMessage || t('contact.form.error')}
               </p>
             ) : null}
           </form>

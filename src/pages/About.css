@@ -115,7 +115,7 @@
 
 .about-timeline__dot {
   position: absolute;
-  left: 4px;
+  left: -24px;
   top: 18px;
   width: 14px;
   height: 14px;
@@ -139,6 +139,10 @@
 }
 
 .about-timeline__institution {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
   margin: 0;
   font-size: 18px;
   line-height: 1.25;
@@ -146,7 +150,12 @@
 }
 
 .about-timeline__flag {
-  margin-right: 8px;
+  flex: 0 0 auto;
+  width: 28px;
+  height: 21px;
+  border-radius: 3px;
+  border: 1px solid var(--accent);
+  overflow: hidden;
 }
 
 .about-timeline__degree {

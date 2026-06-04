@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 
+import FlagIcon from '../components/FlagIcon'
 import './About.css'
 
 function Timeline({ ariaLabel, items }) {
@@ -15,9 +16,7 @@ function Timeline({ ariaLabel, items }) {
           <div className="about-timeline__card">
             <div className="about-timeline__headingRow">
               <h3 className="about-timeline__institution">
-                <span className="about-timeline__flag" aria-hidden="true">
-                  {t(item.flag)}
-                </span>
+                <FlagIcon code={item.flagCode} className="about-timeline__flag" />
                 {t(item.institution)}
               </h3>
             </div>
@@ -58,7 +57,7 @@ export default function About() {
     () => [
       {
         key: 'ucla',
-        flag: 'about.education.items.ucla.flag',
+        flagCode: 'US',
         institution: 'about.education.items.ucla.institution',
         degree: 'about.education.items.ucla.degree',
         dates: 'about.education.items.ucla.dates',
@@ -66,7 +65,7 @@ export default function About() {
       },
       {
         key: 'epitechBerlin',
-        flag: 'about.education.items.epitechBerlin.flag',
+        flagCode: 'DE',
         institution: 'about.education.items.epitechBerlin.institution',
         degree: 'about.education.items.epitechBerlin.degree',
         dates: 'about.education.items.epitechBerlin.dates',
@@ -74,7 +73,7 @@ export default function About() {
       },
       {
         key: 'epitechBarcelona',
-        flag: 'about.education.items.epitechBarcelona.flag',
+        flagCode: 'ES',
         institution: 'about.education.items.epitechBarcelona.institution',
         degree: 'about.education.items.epitechBarcelona.degree',
         dates: 'about.education.items.epitechBarcelona.dates',
@@ -82,7 +81,7 @@ export default function About() {
       },
       {
         key: 'epitechFrance',
-        flag: 'about.education.items.epitechFrance.flag',
+        flagCode: 'FR',
         institution: 'about.education.items.epitechFrance.institution',
         degree: 'about.education.items.epitechFrance.degree',
         dates: 'about.education.items.epitechFrance.dates',
@@ -96,7 +95,7 @@ export default function About() {
     () => [
       {
         key: 'bernerBecker',
-        flag: 'about.experience.items.bernerBecker.flag',
+        flagCode: 'DE',
         institution: 'about.experience.items.bernerBecker.company',
         degree: 'about.experience.items.bernerBecker.role',
         dates: 'about.experience.items.bernerBecker.dates',
@@ -105,7 +104,7 @@ export default function About() {
       },
       {
         key: 'vosslohCogifer',
-        flag: 'about.experience.items.vosslohCogifer.flag',
+        flagCode: 'FR',
         institution: 'about.experience.items.vosslohCogifer.company',
         degree: 'about.experience.items.vosslohCogifer.role',
         dates: 'about.experience.items.vosslohCogifer.dates',

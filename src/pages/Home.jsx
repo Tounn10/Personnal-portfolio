@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
+import { links } from '../config/links'
 import './Home.css'
 
 function getAccentColor() {
@@ -163,8 +164,6 @@ export default function Home() {
     }
   }, [])
 
-  const cvHref = `${import.meta.env.BASE_URL}cv.pdf`
-
   return (
     <section className="home-hero">
       <canvas ref={canvasRef} className="home-hero__canvas" />
@@ -194,9 +193,9 @@ export default function Home() {
             </Link>
 
             <a
-              href={cvHref}
+              href={links.cv}
               className="home-hero__btn home-hero__btn--outline"
-              download
+              download="Etienne_Namur_CV.pdf"
             >
               {t('hero.cta.downloadCv')}
             </a>
@@ -205,7 +204,7 @@ export default function Home() {
           <div className="home-hero__social">
             <a
               className="home-hero__socialLink"
-              href="https://github.com/"
+              href={links.github}
               target="_blank"
               rel="noreferrer"
               aria-label={t('hero.social.github')}
@@ -222,7 +221,7 @@ export default function Home() {
 
             <a
               className="home-hero__socialLink"
-              href="https://www.linkedin.com/"
+              href={links.linkedin}
               target="_blank"
               rel="noreferrer"
               aria-label={t('hero.social.linkedin')}

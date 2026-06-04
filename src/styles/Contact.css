@@ -71,6 +71,10 @@
   resize: vertical;
 }
 
+.contact-form__honeypot {
+  display: none;
+}
+
 .contact-form__button {
   align-self: flex-start;
   border: 1px solid var(--accent);

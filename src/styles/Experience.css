@@ -44,7 +44,7 @@
 
 .experience-timeline__dot {
   position: absolute;
-  left: 4px;
+  left: -24px;
   top: 18px;
   width: 14px;
   height: 14px;
@@ -61,10 +61,23 @@
 }
 
 .experience-timeline__heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 8px;
   margin: 0;
   font-size: 18px;
   line-height: 1.25;
   color: var(--text-primary);
+}
+
+.experience-timeline__flag {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 21px;
+  border-radius: 3px;
+  border: 1px solid var(--accent);
+  overflow: hidden;
 }
 
 .experience-timeline__company {
@@ -108,9 +121,13 @@
   }
 
   .experience-timeline__heading {
-    display: flex;
     flex-direction: column;
-    gap: 4px;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .experience-timeline__flag {
+    margin-right: 0;
   }
 
   .experience-timeline__dash {

@@ -1,3 +1,4 @@
+import { links as siteLinks } from '../config/links'
 import './Footer.css'
 
 function MailIcon(props) {
@@ -28,17 +29,17 @@ export default function Footer() {
   const links = [
     {
       label: 'GitHub',
-      href: 'https://github.com/Tounn10',
+      href: siteLinks.github,
       Icon: GitHubIcon,
     },
     {
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/etienne-namur',
+      href: siteLinks.linkedin,
       Icon: LinkedInIcon,
     },
     {
       label: 'Email',
-      href: 'mailto:etienne.namur@epitech.eu',
+      href: siteLinks.email,
       Icon: MailIcon,
     },
   ]

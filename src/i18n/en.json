@@ -6,8 +6,14 @@
       "email": "Email",
       "message": "Message",
       "send": "Send",
-      "success": "Message sent!",
-      "error": "Something went wrong. Please try again."
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again.",
+      "missingConfig": "Contact form is not configured yet. Add VITE_FORMSPREE_FORM_ID to enable submissions.",
+      "validation": {
+        "name": "Please enter your name.",
+        "email": "Please enter a valid email address.",
+        "message": "Please enter a message."
+      }
     },
     "links": {
       "title": "Find me here"
