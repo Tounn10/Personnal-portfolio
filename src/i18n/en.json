@@ -1,4 +1,18 @@
 {
+  "contact": {
+    "title": "Contact",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send",
+      "success": "Message sent!",
+      "error": "Something went wrong. Please try again."
+    },
+    "links": {
+      "title": "Find me here"
+    }
+  },
   "skills": {
     "title": "Skills",
     "categories": {
