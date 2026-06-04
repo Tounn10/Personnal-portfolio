@@ -1,0 +1,103 @@
+.experience {
+  width: 100%;
+  padding: 40px 16px;
+}
+
+.experience__inner {
+  width: 100%;
+  max-width: 1126px;
+  margin: 0 auto;
+}
+
+.experience__title {
+  margin: 0 0 18px;
+  font-size: 28px;
+  line-height: 1.15;
+  color: var(--text-primary);
+}
+
+.experience-timeline {
+  position: relative;
+  list-style: none;
+  padding: 0 0 0 28px;
+  margin: 0;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 10px;
+  width: 2px;
+  background: var(--accent);
+}
+
+.experience-timeline__item {
+  position: relative;
+  padding: 0 0 16px;
+}
+
+.experience-timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+.experience-timeline__dot {
+  position: absolute;
+  left: 4px;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent);
+}
+
+.experience-timeline__card {
+  padding: 16px;
+  border-radius: 14px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--text-secondary);
+}
+
+.experience-timeline__heading {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+
+.experience-timeline__company {
+  font-weight: 800;
+}
+
+.experience-timeline__role {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.experience-timeline__dash {
+  margin: 0 8px;
+  color: var(--text-secondary);
+}
+
+.experience-timeline__meta {
+  margin: 10px 0 0;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.experience-timeline__sep {
+  margin: 0 10px;
+}
+
+.experience-timeline__bullets {
+  margin: 12px 0 0;
+  padding: 0 0 0 18px;
+  color: var(--text-primary);
+}
+
+.experience-timeline__bullet {
+  margin: 8px 0;
+  font-weight: 500;
+}

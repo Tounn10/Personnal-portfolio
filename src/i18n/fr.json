@@ -31,5 +31,39 @@
         "description": "Outil CLI en Go qui récupère et affiche des prévisions météo à court terme via une API."
       }
     }
+  },
+  "experience": {
+    "title": "Expérience",
+    "items": {
+      "bernerBecker": {
+        "company": "Berner+Becker",
+        "role": "Stagiaire Data Analyst",
+        "location": "Allemagne",
+        "bullets": [
+          "Création de tableaux de bord Power BI pour des KPI opérationnels",
+          "Automatisation du reporting avec des macros VBA dans Excel",
+          "Collaboration avec des équipes transverses pour définir les métriques"
+        ]
+      },
+      "vosslohCogifer": {
+        "company": "Vossloh Cogifer",
+        "role": "Stagiaire ingénierie logicielle",
+        "location": "France",
+        "bullets": [
+          "Développement d’outils internes en Python",
+          "Contribution au design de base de données et à l’optimisation de requêtes SQL",
+          "Participation aux cycles de sprint en méthodologie agile"
+        ]
+      },
+      "freelance": {
+        "company": "Freelance",
+        "role": "Consultant IA & tableaux de bord",
+        "location": "À distance",
+        "bullets": [
+          "Création d’outils et de dashboards basés sur l’IA pour des clients de l’hôtellerie",
+          "Intégration d’API tierces pour des workflows d’automatisation"
+        ]
+      }
+    }
   }
 }

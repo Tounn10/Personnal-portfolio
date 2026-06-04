@@ -31,5 +31,39 @@
         "description": "Go-based CLI tool that fetches and displays short-term weather forecasts from an API."
       }
     }
+  },
+  "experience": {
+    "title": "Experience",
+    "items": {
+      "bernerBecker": {
+        "company": "Berner+Becker",
+        "role": "Data Analyst Intern",
+        "location": "Germany",
+        "bullets": [
+          "Built Power BI dashboards for operational KPIs",
+          "Automated reporting with VBA macros in Excel",
+          "Worked with cross-functional teams to define metrics"
+        ]
+      },
+      "vosslohCogifer": {
+        "company": "Vossloh Cogifer",
+        "role": "Software Engineering Intern",
+        "location": "France",
+        "bullets": [
+          "Developed internal tooling in Python",
+          "Contributed to database design and SQL query optimization",
+          "Participated in agile sprint cycles"
+        ]
+      },
+      "freelance": {
+        "company": "Freelance",
+        "role": "AI & Dashboard Consultant",
+        "location": "Remote",
+        "bullets": [
+          "Built AI-powered tools and dashboards for hospitality clients",
+          "Integrated third-party APIs for automation workflows"
+        ]
+      }
+    }
   }
 }
