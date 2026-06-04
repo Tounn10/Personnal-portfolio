@@ -1,0 +1,11 @@
+{
+  "skills": {
+    "title": "Compétences",
+    "categories": {
+      "languages": "Langages",
+      "data": "Data",
+      "cybersecurity": "Cybersécurité",
+      "tools": "Outils"
+    }
+  }
+}
