@@ -30,7 +30,7 @@
   bottom: 6px;
   left: 10px;
   width: 2px;
-  background: var(--accent);
+  background: var(--gradient-accent);
 }
 
 .experience-timeline__item {
@@ -80,6 +80,12 @@
   overflow: hidden;
 }
 
+.experience-timeline__emoji {
+  flex: 0 0 auto;
+  font-size: 20px;
+  line-height: 1;
+}
+
 .experience-timeline__company {
   font-weight: 800;
 }
@@ -90,7 +96,6 @@
 }
 
 .experience-timeline__dash {
-  margin: 0 8px;
   color: var(--text-secondary);
 }
 

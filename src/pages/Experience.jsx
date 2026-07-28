@@ -14,12 +14,22 @@ export default function Experience() {
   const items = useMemo(
     () => [
       {
+        key: 'freelance',
+        flagCode: null,
+        emoji: '🌍',
+        companyKey: 'experience.items.freelance.company',
+        roleKey: 'experience.items.freelance.role',
+        locationKey: 'experience.items.freelance.location',
+        dates: 'Jan 2026 – Present',
+        bulletsKey: 'experience.items.freelance.bullets',
+      },
+      {
         key: 'bernerBecker',
         flagCode: 'DE',
         companyKey: 'experience.items.bernerBecker.company',
         roleKey: 'experience.items.bernerBecker.role',
         locationKey: 'experience.items.bernerBecker.location',
-        dates: '2024',
+        dates: 'Oct 2024 – Jul 2025',
         bulletsKey: 'experience.items.bernerBecker.bullets',
       },
       {
@@ -28,17 +38,8 @@ export default function Experience() {
         companyKey: 'experience.items.vosslohCogifer.company',
         roleKey: 'experience.items.vosslohCogifer.role',
         locationKey: 'experience.items.vosslohCogifer.location',
-        dates: '2023',
+        dates: 'Sep 2023 – Dec 2023',
         bulletsKey: 'experience.items.vosslohCogifer.bullets',
-      },
-      {
-        key: 'freelance',
-        flagCode: null,
-        companyKey: 'experience.items.freelance.company',
-        roleKey: 'experience.items.freelance.role',
-        locationKey: 'experience.items.freelance.location',
-        dates: '2024–present',
-        bulletsKey: 'experience.items.freelance.bullets',
       },
     ],
     [],
@@ -65,12 +66,16 @@ export default function Experience() {
                           code={item.flagCode}
                           className="experience-timeline__flag"
                         />
+                      ) : item.emoji ? (
+                        <span className="experience-timeline__emoji" aria-hidden="true">
+                          {item.emoji}
+                        </span>
                       ) : null}
                       <span className="experience-timeline__company">
                         {t(item.companyKey)}
                       </span>
                       <span className="experience-timeline__dash" aria-hidden="true">
-                        —
+                        •
                       </span>
                       <span className="experience-timeline__role">{t(item.roleKey)}</span>
                     </h2>
