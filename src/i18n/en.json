@@ -25,7 +25,14 @@
       "languages": "Languages",
       "data": "Data",
       "cybersecurity": "Cybersecurity",
-      "tools": "Tools"
+      "tools": "Tools",
+      "gameDev": "Game Dev",
+      "spokenLanguages": "Spoken Languages"
+    },
+    "languageNames": {
+      "french": "French",
+      "english": "English",
+      "german": "German"
     }
   },
   "projects": {
