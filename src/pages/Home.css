@@ -37,6 +37,7 @@
 
 .home-hero__name {
   margin: 0 0 14px;
+  margin-left: -0.05em;
   font-size: clamp(40px, 6vw, 64px);
   line-height: 1.05;
 }
