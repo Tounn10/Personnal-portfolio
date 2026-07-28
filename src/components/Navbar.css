@@ -82,6 +82,21 @@
   background: var(--bg-primary);
 }
 
+.navbar__button--lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navbar__langFlag {
+  width: 18px;
+  height: 13.5px;
+  border-radius: 2px;
+  border: 1px solid var(--text-secondary);
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
 .navbar__hamburger {
   display: none;
   border: 1px solid currentColor;

@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 import useTheme from '../context/useTheme.js'
+import FlagIcon from './FlagIcon'
 import './Navbar.css'
 
 export default function Navbar() {
@@ -78,10 +79,14 @@ export default function Navbar() {
 
             <button
               type="button"
-              className="navbar__button"
+              className="navbar__button navbar__button--lang"
               onClick={onToggleLanguage}
               aria-label="Toggle language"
             >
+              <FlagIcon
+                code={currentLang === 'fr' ? 'US' : 'FR'}
+                className="navbar__langFlag"
+              />
               {currentLang === 'fr' ? 'EN' : 'FR'}
             </button>
           </div>
