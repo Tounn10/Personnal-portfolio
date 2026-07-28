@@ -101,7 +101,7 @@
   bottom: 6px;
   left: 10px;
   width: 2px;
-  background: var(--accent);
+  background: var(--gradient-accent);
 }
 
 .about-timeline__item {

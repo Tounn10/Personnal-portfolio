@@ -5,6 +5,7 @@
   align-items: center;
   padding: var(--section-padding);
   overflow: hidden;
+  background: var(--gradient-glacier);
 }
 
 .home-hero__canvas {
@@ -100,7 +101,7 @@
 }
 
 .home-hero__btn--primary {
-  background: var(--accent);
+  background: var(--gradient-accent);
   color: var(--bg-primary);
 }
 

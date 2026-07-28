@@ -1,24 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Light mode */
-  --bg-primary: #fff2f2;
-  --bg-secondary: #e8e0f0;
-  --accent: #2d336b;
-  --accent-hover: #1e2450;
-  --text-primary: #1a1a2e;
-  --text-secondary: #4a4a6a;
+  /* Light mode - glacier */
+  --bg-primary: #eaf7ff;
+  --bg-secondary: #d3edfb;
+  --accent: #0a6396;
+  --accent-hover: #0e7fbf;
+  --text-primary: #06202e;
+  --text-secondary: #3c6478;
+  --gradient-glacier: linear-gradient(135deg, #f5fbff 0%, #a8e6ff 100%);
+  --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
   --section-padding: 5rem 2rem;
 }
 
 [data-theme="dark"] {
-  /* Dark mode */
-  --bg-primary: #0d0d14;
-  --bg-secondary: #111118;
-  --accent: #2d336b;
-  --accent-hover: #3d4490;
-  --text-primary: #f0eeff;
-  --text-secondary: #a0a0c0;
+  /* Dark mode - glacier */
+  --bg-primary: #001020;
+  --bg-secondary: #041b30;
+  --accent: #55c7ff;
+  --accent-hover: #7fd6ff;
+  --text-primary: #eaf6ff;
+  --text-secondary: #8fb4c9;
+  --gradient-glacier: linear-gradient(135deg, #001020 0%, #072d4a 100%);
+  --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
 }
 
 *,
