@@ -56,6 +56,13 @@ const resources = {
           title: 'Education timeline',
           timelineAriaLabel: 'Education (most recent first)',
           items: {
+            sanFrancisco: {
+              flag: '🇺🇸',
+              institution: 'Epitech',
+              degree: '5th year internship in San Francisco (completing Epitech Master in parallel)',
+              dates: 'Sep 2026 – Aug 2027',
+              location: 'San Francisco, USA',
+            },
             ucla: {
               flag: '🇺🇸',
               institution: 'UCLA',
@@ -66,48 +73,23 @@ const resources = {
             epitechBerlin: {
               flag: '🇩🇪',
               institution: 'Epitech',
-              degree: 'Master in Software Engineering (4th year, Berlin)',
-              dates: 'Sep 2025 – Aug 2027',
+              degree: 'Bachelor in Software Engineering (3rd year, Berlin)',
+              dates: 'Sep 2024 – Aug 2025',
               location: 'Berlin, Germany',
             },
             epitechBarcelona: {
               flag: '🇪🇸',
               institution: 'Epitech Barcelona',
-              degree: '3rd year exchange',
-              dates: '2023–2024',
+              degree: '2nd year exchange',
+              dates: 'Jan 2024 – Jul 2024',
               location: 'Barcelona, Spain',
             },
             epitechFrance: {
               flag: '🇫🇷',
               institution: 'Epitech France',
-              degree: '1st & 2nd year',
-              dates: 'Oct 2022 – 2023',
+              degree: '1st year',
+              dates: 'Oct 2022 – Jul 2023',
               location: 'France',
-            },
-          },
-        },
-        experience: {
-          ariaLabel: 'Experience timeline',
-          title: 'Experience timeline',
-          timelineAriaLabel: 'Experience (most recent first)',
-          items: {
-            bernerBecker: {
-              flag: '🇩🇪',
-              company: 'Berner+Becker',
-              role: 'VBA & Power BI Developer',
-              dates: 'Oct 2024 – Jul 2025',
-              location: 'Berlin, Germany',
-              description:
-                'Developed Power BI dashboards for hotel clients, automated Excel/VBA reporting tools, and integrated data from multiple hotel sources.',
-            },
-            vosslohCogifer: {
-              flag: '🇫🇷',
-              company: 'Vossloh Cogifer',
-              role: 'VBA Developer Intern',
-              dates: 'Sep 2023 – Dec 2023',
-              location: 'Fère-en-Tardenois, France',
-              description:
-                'Built VBA tools connected to Oracle DB to automate client file processing in an industrial environment.',
             },
           },
         },
@@ -167,6 +149,13 @@ const resources = {
           title: "Parcours d'études",
           timelineAriaLabel: 'Études (du plus récent au plus ancien)',
           items: {
+            sanFrancisco: {
+              flag: '🇺🇸',
+              institution: 'Epitech',
+              degree: '5e année en stage à San Francisco (Master Epitech complété en parallèle)',
+              dates: 'Sep 2026 – Août 2027',
+              location: 'San Francisco, États-Unis',
+            },
             ucla: {
               flag: '🇺🇸',
               institution: 'UCLA',
@@ -177,48 +166,23 @@ const resources = {
             epitechBerlin: {
               flag: '🇩🇪',
               institution: 'Epitech',
-              degree: 'Master en ingénierie logicielle (4e année, Berlin)',
-              dates: 'Sep 2025 – Août 2027',
+              degree: 'Bachelor en ingénierie logicielle (3e année, Berlin)',
+              dates: 'Sep 2024 – Août 2025',
               location: 'Berlin, Allemagne',
             },
             epitechBarcelona: {
               flag: '🇪🇸',
               institution: 'Epitech Barcelona',
-              degree: 'Échange de 3e année',
-              dates: '2023–2024',
+              degree: 'Échange de 2e année',
+              dates: 'Janv 2024 – Juil 2024',
               location: 'Barcelone, Espagne',
             },
             epitechFrance: {
               flag: '🇫🇷',
               institution: 'Epitech France',
-              degree: '1re & 2e année',
-              dates: 'Oct 2022 – 2023',
+              degree: '1re année',
+              dates: 'Oct 2022 – Juil 2023',
               location: 'France',
-            },
-          },
-        },
-        experience: {
-          ariaLabel: "Parcours professionnel",
-          title: "Parcours professionnel",
-          timelineAriaLabel: 'Expérience (du plus récent au plus ancien)',
-          items: {
-            bernerBecker: {
-              flag: '🇩🇪',
-              company: 'Berner+Becker',
-              role: 'Développeur VBA & Power BI',
-              dates: 'Oct 2024 – Juil 2025',
-              location: 'Berlin, Allemagne',
-              description:
-                'Développement de tableaux de bord Power BI pour des clients hôteliers, automatisation d’outils de reporting Excel/VBA, et intégration de données provenant de plusieurs sources hôtelières.',
-            },
-            vosslohCogifer: {
-              flag: '🇫🇷',
-              company: 'Vossloh Cogifer',
-              role: 'Stagiaire développeur VBA',
-              dates: 'Sep 2023 – Déc 2023',
-              location: 'Fère-en-Tardenois, France',
-              description:
-                'Conception d’outils VBA connectés à une base Oracle pour automatiser le traitement de fichiers clients dans un environnement industriel.',
             },
           },
         },

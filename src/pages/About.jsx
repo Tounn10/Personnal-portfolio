@@ -56,6 +56,14 @@ export default function About() {
   const educationItems = useMemo(
     () => [
       {
+        key: 'sanFrancisco',
+        flagCode: 'US',
+        institution: 'about.education.items.sanFrancisco.institution',
+        degree: 'about.education.items.sanFrancisco.degree',
+        dates: 'about.education.items.sanFrancisco.dates',
+        location: 'about.education.items.sanFrancisco.location',
+      },
+      {
         key: 'ucla',
         flagCode: 'US',
         institution: 'about.education.items.ucla.institution',
@@ -86,30 +94,6 @@ export default function About() {
         degree: 'about.education.items.epitechFrance.degree',
         dates: 'about.education.items.epitechFrance.dates',
         location: 'about.education.items.epitechFrance.location',
-      },
-    ],
-    [],
-  )
-
-  const experienceItems = useMemo(
-    () => [
-      {
-        key: 'bernerBecker',
-        flagCode: 'DE',
-        institution: 'about.experience.items.bernerBecker.company',
-        degree: 'about.experience.items.bernerBecker.role',
-        dates: 'about.experience.items.bernerBecker.dates',
-        location: 'about.experience.items.bernerBecker.location',
-        description: 'about.experience.items.bernerBecker.description',
-      },
-      {
-        key: 'vosslohCogifer',
-        flagCode: 'FR',
-        institution: 'about.experience.items.vosslohCogifer.company',
-        degree: 'about.experience.items.vosslohCogifer.role',
-        dates: 'about.experience.items.vosslohCogifer.dates',
-        location: 'about.experience.items.vosslohCogifer.location',
-        description: 'about.experience.items.vosslohCogifer.description',
       },
     ],
     [],
@@ -150,19 +134,6 @@ export default function About() {
           <Timeline
             ariaLabel={t('about.education.timelineAriaLabel')}
             items={educationItems}
-          />
-        </div>
-      </section>
-
-      <section
-        className="about-section"
-        aria-label={t('about.experience.ariaLabel')}
-      >
-        <div className="about-section__inner">
-          <h2 className="about-section__title">{t('about.experience.title')}</h2>
-          <Timeline
-            ariaLabel={t('about.experience.timelineAriaLabel')}
-            items={experienceItems}
           />
         </div>
       </section>
